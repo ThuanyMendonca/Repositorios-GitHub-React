@@ -12,7 +12,8 @@ module.exports = {
       SharedArrayBuffer: 'readonly',
       __DEV__: 'readonly',
       fetch: 'false',
-      document: 'false'
+      document: 'false',
+      localStorage: 'false'
     },
     parser: 'babel-eslint',
     parserOptions: {
