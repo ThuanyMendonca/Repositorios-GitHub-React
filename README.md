@@ -4,14 +4,14 @@ Prova front-end desenvolvida com React com consultas a API do GitHub
 
 # APIs
 
-https://api.github.com/users/<usuario no github>/repos
-https://api.github.com/repositories/<id do repositorio>
+<p>https://api.github.com/users/<usuario no github>/repos</p>
+<p>https://api.github.com/repositories/<id do repositorio></p>
 
 ## Installation
 
 git clone https://github.com/ThuanyMendonca/prova-front-end.git
-cd front-end/
-yarn start
+<p>cd front-end/</p>
+<p>yarn start </p>
 
 ## Execução do projeto
 O projeto será executado no http://localhost:3000
