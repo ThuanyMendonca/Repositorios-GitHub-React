@@ -36,3 +36,15 @@ export const Card = styled.div`
   color: #794bc4;
   border-radius: 5px;
 `;
+
+export const OptionsContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin: 1em 3em 0;
+  align-items: center;
+  cursor: pointer;
+`;
+
+export const OptionText = styled.span`
+  margin-left: 1em;
+`;

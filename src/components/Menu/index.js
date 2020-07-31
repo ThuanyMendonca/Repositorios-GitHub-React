@@ -1,25 +1,41 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 
-import { Container, ContentContainer, Nav, Ul, A } from './styles';
+import {
+  Container,
+  ContentContainer,
+  Nav,
+  LogoutButton,
+  PageName,
+  WelcomeContainer,
+  OptionsContainer,
+  User,
+} from './styles';
 
 import { logout } from '../../actions';
 
 // eslint-disable-next-line no-shadow
 const Menu = ({ children, logout, username }) => {
+  const { pathname } = useLocation();
+
+  let titulo = '';
+
+  if (pathname.includes('pesquisar')) titulo = 'Pesquisar';
+  else if (pathname.includes('repositorios')) titulo = 'Repositórios';
+
   return (
     <Container>
       <Nav>
-        <Ul>
-          <li>
-            <A>{username}</A>
-          </li>
-          <li>
-            <A href="/" onClick={() => logout()}>
-              Logout
-            </A>
-          </li>
-        </Ul>
+        <WelcomeContainer>
+          Seja bem-vindo, <User>{username}</User> !
+        </WelcomeContainer>
+        <PageName>{titulo}</PageName>
+        <OptionsContainer>
+          <LogoutButton href="/" onClick={() => logout()}>
+            Logout
+          </LogoutButton>
+        </OptionsContainer>
       </Nav>
       <ContentContainer>{children}</ContentContainer>
     </Container>

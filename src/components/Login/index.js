@@ -51,7 +51,6 @@ const Login = ({ login, username }) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log('a', { state });
   return {
     username: state.username,
   };

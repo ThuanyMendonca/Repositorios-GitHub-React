@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import Modal from 'react-modal';
 import Loader from 'react-loader-spinner';
+import { GoArrowLeft } from 'react-icons/go';
 
 import ModalContent from '../ModalContent';
 
-import { ContainerLoader, Container, CardsContainer, Card } from './styles';
+import {
+  ContainerLoader,
+  Container,
+  CardsContainer,
+  Card,
+  OptionsContainer,
+  OptionText,
+} from './styles';
 
 Modal.setAppElement('#root');
 
@@ -36,6 +44,8 @@ const Repositorio = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedId, setSelectedId] = useState();
 
+  const history = useHistory();
+
   useEffect(() => {
     async function getRepositorios() {
       setIsLoading(true);
@@ -64,6 +74,9 @@ const Repositorio = () => {
 
   return (
     <Container>
+      <OptionsContainer onClick={() => history.push('/app/pesquisar')}>
+        <GoArrowLeft size="2em" /> <OptionText>Voltar para pesquisa</OptionText>
+      </OptionsContainer>
       {isLoading && (
         <ContainerLoader>
           <Loader
