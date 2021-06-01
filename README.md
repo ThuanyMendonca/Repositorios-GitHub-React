@@ -4,7 +4,7 @@ Prova front-end desenvolvida com React com consultas a API do GitHub
 
 # APIs
 
-<p>https://api.github.com/users/<usuario no github>/repos</p>
+<p>https://api.github.com/users/USUARIO_GITHUB/repos</p>
 <p>https://api.github.com/repositories/<id do repositorio></p>
 
 ## Installation
