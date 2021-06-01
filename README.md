@@ -1,6 +1,6 @@
-# Prova Front-End React
+# Pesquisa de repositórios GitHub com React
 
-Prova front-end desenvolvida com React com consultas a API do GitHub
+Aplicação desenvolvida com React para consultar API do GitHub
 
 # APIs
 
